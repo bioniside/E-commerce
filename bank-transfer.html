@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transfer Payment</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f5f7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Makes the body take up at least the full height of the viewport */
+            margin: 0; /* Remove default body margins */
+        }
+
+        h1, h2 {
+            color: #634bc1;
+        }
+
+        a, button {
+            text-decoration: none;
+            color: #634bc1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            color: #1c047a;
+        }
+
+        /* Header Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px #0000001a;
+        }
+
+        #header nav a {
+            font-size: 16px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #header nav {
+            margin-right: 30px;
+        }
+
+        #header nav a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Payment Section */
+        #payment {
+            background-color: #f4f5f5;
+            width: 90%;
+            max-width: 400px;
+            margin: 110px auto 50px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex: 1;
+        }
+
+        #payment h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #634bc1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Optional margin to create spacing from content */
+    margin-bottom: 0; /* Remove margin at the bottom */
+
+
+        }
+
+        footer a {
+            color: #ffdc89;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        #logo strong {
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="payment.html">Payment</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section id="payment">
+        <h1>Bank Transfer Payment</h1>
+        <img src="bank.jpg" width="100px" height="100px" style="border-radius: 7px; margin-bottom: 30px;">
+        <form action="payment-success.html" method="POST">
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" name="account-number" placeholder="account number" required><br><br>
+            <label for="bank-name">Bank Name:</label>
+            <input type="text" id="bank-name" name="bank-name" placeholder="Bank name" required><br><br>
+            <button type="submit">Proceed to Pay</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div id="google_translate_element"></div><br>
+        <p>&copy; 2024 ShopEasy. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: "en",
+  includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+  
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
+  );
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+</body>
+</html>

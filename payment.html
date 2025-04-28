@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f5f7;
+        }
+
+        h1, h2 {
+            color: #634bc1;
+        }
+
+        a, button {
+            text-decoration: none;
+            color: #634bc1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            color: #1c047a;
+        }
+
+        /* Header Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px #0000001a;
+        }
+
+        #header nav a {
+            font-size: 16px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #header nav {
+            margin-right: 30px;
+        }
+
+        #header nav a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Payment Section */
+        #payment {
+            margin-top: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #payment h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .payment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .payment-item img {
+            width: 130px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .payment-item-details {
+            flex: 2;
+            margin-left: 20px;
+        }
+
+        .payment-item-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .payment-item-details p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        #payment-summary {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        #payment-summary h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .payment-method {
+            padding: 10px;
+            background-color: #634bc1;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-method:hover {
+            background-color: #1c047a;
+            color: white;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        footer a {
+            color: #ffdc89;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        #logo strong {
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section id="payment">
+        <h1>Review Your Order</h1>
+        <div id="payment-items">
+            <!-- Payment items will be dynamically injected here -->
+        </div>
+        <div id="payment-summary">
+            <h3>Total: $<span id="payment-total">0</span></h3>
+        </div>
+        <div class="payment-methods">
+            <button class="payment-method" onclick="creditCard()">Credit Card <img src="card2.jpg" width="60px" height="60px" style="border-radius: 7px;"></button>
+            <button class="payment-method" onclick="mtn()">Mobile Money <img src="mtn.jpg" width="60px" height="60px" style="border-radius: 7px;"></button>
+            <button class="payment-method" onclick="PayPal()">PayPal<img src="paypal.jpg" width="60px" height="60px" style="border-radius: 7px;"></button>
+                        <button class="payment-method" onclick="airtel()">Airtel Money <img src="airtel.jpg" width="60px" height="60px" style="border-radius: 7px;"></button>
+            <button class="payment-method" onclick="bankTransfer()">Bank Transfer <img src="bank.jpg" width="60px" height="60px" style="border-radius: 7px;"></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div id="google_translate_element"></div><br>
+        <p>&copy; 2024 ShopEasy. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Display Payment Items
+        function displayPayment() {
+            const paymentItemsContainer = document.getElementById("payment-items");
+            const paymentTotalElement = document.getElementById("payment-total");
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            paymentItemsContainer.innerHTML = "";
+
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const paymentItem = document.createElement("div");
+                paymentItem.className = "payment-item";
+
+                paymentItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="payment-item-details">
+                        <h3>${item.name}</h3>
+                        <p>$${item.price}</p>
+                    </div>
+                    <p>Quantity: ${item.quantity}</p>
+                `;
+
+                paymentItemsContainer.appendChild(paymentItem);
+            });
+
+            paymentTotalElement.textContent = total.toFixed(2);
+        }
+
+        // Select Payment Method
+        function creditCard() {
+            window.location.href="credit-card-pay.html";
+        }
+        function PayPal(){
+            window.location.href="pay-pal.html"
+        }
+        function bankTransfer(){
+            window.location.href="bank-transfer.html"
+        }
+        function mtn(){
+            window.location.href="mtn.html"
+        }
+        function airtel(){
+            window.location.href="airtel.html"
+        }
+
+        // Initial payment display
+        displayPayment();
+    </script>
+     <script type="text/javascript">
+        function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: "en",
+  includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+  
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
+  );
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

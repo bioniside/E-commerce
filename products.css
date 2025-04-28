@@ -1,0 +1,224 @@
+      /* General Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background-color: #f4f5f7;
+        background-position: center;
+        background-size: cover;
+    }
+
+    h1, h2, h3 {
+        color: #634bc1;
+    }
+
+    a {
+        text-decoration: none;
+        color: #634bc1;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #1c047a;
+    }
+
+    /* Header Styling */
+    #header {
+        background-color: #634bc1;
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        box-shadow: 0px 2px 4px #0000001a;
+    }
+    #header nav{
+        margin-right: 30px;
+    }
+
+    #header nav a {
+        font-size: 16px;
+        color: white;
+        margin-left: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    #header nav a:hover {
+        background-color: #1c047a;
+    }
+
+    /* Hero Section */
+    #hero {
+        margin-top: 80px;
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 8px #0000001a;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    #hero p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    #hero a {
+        background-color: #634bc1;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 10px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    #hero a:hover {
+        background-color: #1c047a;
+    }
+    #more{
+        background-color: #634bc1;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 3px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+    #more:hover{
+        background-color: #1c047a;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    /* Products Section */
+    #products {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    #products h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .more{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    .product-card {
+        background-color: #ffffff;
+        width: 250px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .product-card p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .product-card a,.products button {
+        display: inline-block;
+        background-color: #634bc1;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .product-card a:hover,.products button:hover {
+        background-color: #1c047a;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #634bc1;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    footer a {
+        color: #ffdc89;
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    #logo {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo img {
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    #logo strong {
+        font-size: 24px;
+        color: white;
+    }
+    #her {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #555;
+    }

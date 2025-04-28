@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - User Account</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f5f7;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #634bc1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #634bc1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1c047a;
+        }
+
+        /* Header Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #header nav {
+            margin-right: 20px;
+        }
+
+        #header nav a {
+            font-size: 16px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #header nav a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Account Section */
+        #account {
+            margin-top: 100px;
+            padding: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #account h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #account p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f5f7;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .info span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            background-color: #634bc1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #1c047a;
+        }
+
+        .delete-btn {
+            background-color: #ff4d4d;
+        }
+
+        .delete-btn:hover {
+            background-color: #e60000;
+        }
+
+        footer {
+            background-color: #634bc1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ffdc89;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        #logo strong {
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Account Section -->
+    <section id="account">
+        <h1>Your ShopEasy Account</h1>
+
+        <!-- User Information -->
+        <div class="info">
+            <label>Username:</label>
+            <span>JohnDoe123</span>
+        </div>
+
+        <div class="info">
+            <label>Email:</label>
+            <span>johndoe@shopeasy.com</span>
+        </div>
+
+        <div class="info">
+            <label>Member Since:</label>
+            <span>January 15, 2024</span>
+        </div>
+
+        <!-- Account Options -->
+        <h2>Account Options</h2>
+        <p>
+            <strong>Manage your ShopEasy account:</strong> You can update your account information or delete your account permanently.
+        </p>
+        <button onclick="alert('Feature coming soon!')">Update Account</button>
+        <button class="delete-btn" onclick="alert('Feature coming soon!')">Delete Account</button>
+
+        <!-- Additional Information -->
+        <h2>Your Activity</h2>
+        <p>
+            Keep track of your recent activity on ShopEasy. Stay updated with your orders, favorites, and actions.
+        </p>
+        <ul>
+            <li>Placed an order on December 3, 2024</li>
+            <li>Added a new item to the wishlist on November 28, 2024</li>
+            <li>Updated shipping address on November 20, 2024</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div id="google_translate_element"></div><br>
+        <p>&copy; 2024 ShopEasy. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: "en",
+  includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+  
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
+  );
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

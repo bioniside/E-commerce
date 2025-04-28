@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and Navigation Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px #0000001a;
+        }
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+        }
+
+        nav {
+            margin-right: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 7px 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Signup Form Styling */
+        #signup {
+            background-color: #f4f5f5;
+            width: 90%;
+            max-width: 400px;
+            margin: 110px auto 50px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #signup h1 {
+            color: #634bc1;
+            margin-bottom: 20px;
+        }
+
+        #signup label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        #signup input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #signup input:focus {
+            border-color: #634bc1;
+            outline: none;
+        }
+
+        button {
+            background-color: #634bc1;
+            padding: 10px 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1c047a;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #07ea4b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        #logo strong {
+            font-size: 24px;
+            color: white;
+        }
+
+        #warning{
+            color:  red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Signup Form -->
+    <form id="registrationForm">
+        <div id="signup">
+            <h1>Create Your Account</h1>
+            <label for="username">Username</label>
+            <input type="text" id="userName" name="userName" placeholder="Enter your username" >
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" >
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <label for="confirmPassword">Confirm Password </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="confirm password" >
+
+            <button type="submit">Signup</button>
+            <p id="warning"></p>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div id="google_translate_element"></div><br>
+        <p>&copy; 2024 Your Platform. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: "en",
+  includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+  
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
+  );
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    const form = document.getElementById("registrationForm");
+    const warning = document.getElementById("warning");
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        const userName = document.getElementById("userName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword = document.getElementById("confirmPassword").value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!userName || !email || !password || !confirmPassword){
+            warning.textContent = "Every item must be filed.";
+            warning.style.display = "block";
+            form.reset();
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+            return;
+        }
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+            warning.textContent = "Please Enter a valid Email!";
+            warning.style.display = "block";
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+            return;
+        }
+        if(!/^[a-zA-Z0-9]+$/.test(userName)){
+            warning.textContent = "Please username must not contain neither a digit nor a special character. Try again later";
+            warning.style.display ="block";
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+            return;
+        }
+        if(!/[a-z]/.test(password) && !/[A-Z]/.test(password) && !/^[a-zA-Z0-9]/.test(password) && !/[0-9]/.test(password)){
+            warning.textContent = "Please password must be eight characters length, at least one uppercase leter, lowercase later, digit and special character.";
+            warning.style.display = "block";
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+            return;
+        }
+        if(password.length < 8){
+            warning.textContent ="input at least eight characters long";
+            warning.style.display = "block";
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+            return;
+        }
+        if(password !== confirmPassword){
+            warning.textContent ="Please password do not match. Please check your password and try again."
+            warning.style.display = "block";
+            setTimeout(function(){
+                warning.style.display ="none";
+            },4000)
+            return;
+        }
+        fetch("http://localhost:4000/api/user/register",{
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username: userName,
+                email : email,
+                password1 : password,
+                password2 : confirmPassword,
+            }),
+        })
+        .then(function(response){
+            if (!response.ok) {
+                // Handle specific error cases
+                if (response.status === 409) {
+                    throw new Error("Email already exists in the database. Please log in instead.");
+                } else {
+                    throw new Error("Network response was not ok.");
+                }
+            }
+            return response.json();
+        })
+        .then(function(data){
+            warning.textContent = "Registration was done successfully! you can now login!!";
+            warning.style.display ="block";
+            warning.style.color = "green";
+            form.reset();
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+        })
+        .catch(function(error){
+            console.error("Error signing up:", error);
+            warning.textContent = "Failed to register. Please try again later!";
+            warning.style.display = "block";
+            form.reset();
+            setTimeout(function(){
+                warning.style.display = "none";
+            },4000)
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Smartphone XYZ</title>
+    <style>
+       /* General Styling */
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f5f7;
+        }
+
+        h1, h2, h3 {
+            color: #634bc1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #634bc1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1c047a;
+        }
+
+        /* Header Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px #0000001a;
+        }
+        #header nav{
+            margin-right: 30px;
+        }
+
+        #header nav a {
+            font-size: 16px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #header nav a:hover {
+            background-color: #1c047a;
+        }
+
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-details img {
+            max-width: 100%;
+            width: 400px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        .details h1 {
+            color: #634bc1;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .details .price {
+            font-size: 20px;
+            color: #1c047a;
+            margin: 20px 0;
+        }
+
+        .details .add-to-cart {
+            background-color: #634bc1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .details .add-to-cart:hover {
+            background-color: #1c047a;
+        }
+
+        footer {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffdc89;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo" style="height: 50px; border-radius: 25px;">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <!-- Product Details -->
+      <!-- Product Details -->
+      <div class="container">
+        <div class="product-details">
+            <img src="cup.jpg" alt="Laptop Lenovo i7">
+            <div class="details">
+                <h1>Cups</h1>
+                <p>Experience the best of technology with the Laptop Lenovo i7. Featuring a stunning display, powerful processor, and excellent performance.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>16GB RAM, 512GB SSD</li>
+                    <li>10th Gen Intel i7 Processor</li>
+                    <li>15.6-inch Full HD Display</li>
+                </ul>
+                <p class="price">$39</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="tocart" style="color: blue;"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShopEasy. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script>
+        // Add to Cart Functionality
+        function addToCart() {
+            // Product details
+            const product = {
+                name: "Cups",
+                price: 31.87,
+                image: "cup.jpg",
+                quantity: 1
+            };
+
+            // Retrieve existing cart data from localStorage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if the product already exists in the cart
+            const existingProduct = cart.find(item => item.name === product.name);
+
+            if (existingProduct) {
+                // Increment quantity if product already exists
+                existingProduct.quantity += 1;
+            } else {
+                // Add new product to the cart
+                cart.push(product);
+            }
+
+            // Save updated cart back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+  // Confirmation message
+  document.getElementById('tocart').innerHTML="Product added to cart";
+                // Clear the message after 4 seconds
+        setTimeout(function() {
+            document.getElementById('tocart').innerHTML = ""; // Clear the message
+    }, 4000); // 4000 milliseconds = 4 seconds
+        }
+    </script>
+</body>
+</html>
