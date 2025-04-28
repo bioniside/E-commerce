@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your One-Stop Online Store</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f5f7;
+        }
+
+        h1, h2, h3 {
+            color: #634bc1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #634bc1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1c047a;
+        }
+
+        /* Header Styling */
+        #header {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px #0000001a;
+        }
+        #header nav{
+            margin-right: 30px;
+        }
+
+        #header nav a {
+            font-size: 16px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #header nav a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Hero Section */
+        #hero {
+            margin-top: 80px;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        #hero a {
+            background-color: #634bc1;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        #hero a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Features Section */
+        #features {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        #features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .feature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .feature-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Featured Products Section */
+        #products {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        #products h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #634bc1;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #634bc1;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product a:hover {
+            background-color: #1c047a;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #634bc1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ffdc89;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        #logo strong {
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.jpg" alt="ShopEasy Logo">
+            <strong>ShopEasy</strong>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to ShopEasy</h1>
+        <p>
+            Your one-stop shop for the best deals, latest trends, and all your favorite products. From fashion to electronics, we've got you covered!
+        </p>
+        <p>
+            <strong>Join us today</strong> and enjoy an exclusive shopping experience tailored to your needs.
+        </p>
+        <a href="signup.html">Sign Up Now</a>
+        <a href="Products.html">Start Shopping</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Why Choose ShopEasy?</h2>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Wide Product Range</h3>
+                <p>
+                    Explore an extensive collection of high-quality products across multiple categories, all at competitive prices.
+                </p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Secure Payments</h3>
+                <p>
+                    Shop with confidence using our safe and secure payment options. Your privacy and security are our top priority.
+                </p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Fast Delivery</h3>
+                <p>
+                    Get your orders delivered quickly and reliably, right to your doorstep. Enjoy hassle-free shopping at its best.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="shoes.jpg" alt="Product 1">
+                <h3>Shoes</h3>
+                <p>$49</p>
+                <a href="shoes.html">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="bag.jpg" alt="Product 2">
+                <h3>Arm Bag</h3>
+                <p>$99.5</p>
+                <a href="bag.html">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="watch.jpg" alt="Product 3">
+                <h3>Sports Watch</h3>
+                <p>$1549</p>
+                <a href="watch.html">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div id="google_translate_element"></div><br>
+        <p>&copy; 2024 ShopEasy. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: "en",
+  includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+  
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
+  );
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
