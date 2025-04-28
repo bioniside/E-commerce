@@ -184,7 +184,7 @@ loginForm.addEventListener('submit',(event)=>{
     const username = document.getElementById('username').value.trim()
     const password = document.getElementById('password').value.trim()
     const loginError = document.getElementById('loginError') 
-    fetch('www.eric.com',{
+     fetch('https://easy-shop-api-yk76.onrender.com/user/login',{
         method: 'POST',
         headers:{
             'content-Type': 'application/json',
